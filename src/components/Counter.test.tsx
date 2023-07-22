@@ -70,6 +70,10 @@ test('it should show an alert when count state exceeds 10 on increase', () => {
 
   // Alert should be poped up when count goes above 10
   expect(mockAlert).toHaveBeenCalledWith("Count can't be more than 10");
+
+  // Verify that the count is still 10
+  const counterElement = screen.getByText(/Count: 10/i);
+  expect(counterElement).toBeInTheDocument();
 });
 
 test('it should show an alert when count state goes below 0 on decrease', () => {
@@ -81,4 +85,9 @@ test('it should show an alert when count state goes below 0 on decrease', () => 
 
   // Alert should be poped up when count goes below 0
   expect(mockAlert).toHaveBeenCalledWith("Count can't be less than 0");
+  
+  // Verify that the count is still 0
+  const countElement = screen.getByText(/Count: 0/i);
+  expect(countElement).toBeInTheDocument();
+
 });
