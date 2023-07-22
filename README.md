@@ -36,3 +36,6 @@ useState hook has been used to  maintains count type of number
 
 Styles are defined within the component as Record<string, CSSProperties>.
 It's an object with keys of type string, and the values should be type of CSSProperties.
+
+state : count
+state update method : setCount
